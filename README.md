@@ -32,7 +32,7 @@ npm install
 To run the loan calculator application, use the following command:
 
 ```
-node index.js --principal=100000 --interestRate=5 --loanTerm=360
+node index.js --principal=100000 --interestRate=12 --loanTerm=360
 ```
 
 You can also use the command-line interface to input your loan parameters and receive the calculated results.

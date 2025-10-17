@@ -1,0 +1,21 @@
+{
+  "name": "loan-calculator",
+  "version": "1.0.0",
+  "description": "A simple loan calculator application to compute loan parameters.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node src/index.js"
+  },
+  "keywords": [
+    "loan",
+    "calculator",
+    "finance"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^27.0.0"
+  }
+}

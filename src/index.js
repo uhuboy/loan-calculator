@@ -33,3 +33,17 @@ const totalInterest = loanCalculator.calculateTotalInterest();
 console.log(`Monthly Payment: ${monthlyPayment.toFixed(2)}`);
 console.log(`Total Payment: ${totalPayment.toFixed(2)}`);
 console.log(`Total Interest: ${totalInterest.toFixed(2)}`);
+
+// สร้างและแสดงตารางผ่อนชำระเป็นงวด
+const schedule = loanCalculator.generateAmortizationSchedule();
+
+console.log('\nAmortization schedule:');
+console.log('Month |   Payment |  Principal |   Interest |     Balance');
+for (const row of schedule) {
+    const monthStr = String(row.month).padStart(5);
+    const paymentStr = row.payment.toFixed(2).padStart(9);
+    const principalStr = row.principalPaid.toFixed(2).padStart(10);
+    const interestStr = row.interestPaid.toFixed(2).padStart(11);
+    const balanceStr = row.balance.toFixed(2).padStart(12);
+    console.log(`${monthStr} | ${paymentStr} | ${principalStr} | ${interestStr} | ${balanceStr}`);
+}

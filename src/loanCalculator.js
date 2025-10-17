@@ -24,4 +24,4 @@ class LoanCalculator {
     }
 }
 
-export default LoanCalculator;
+module.exports = { LoanCalculator };

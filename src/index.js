@@ -1,10 +1,19 @@
 // This file serves as the entry point for the loan calculator application.
 // It initializes the application and may handle user input or command-line arguments.
 
-import { LoanCalculator } from './loanCalculator';
-import { parseArgs } from 'node:util';
+const { parseArgs } = require('node:util');
+const { LoanCalculator } = require('./loanCalculator');
 
-const args = parseArgs(process.argv);
+const parsed = parseArgs({
+    args: process.argv.slice(2),
+    options: {
+        principal: { type: 'string' },
+        interestRate: { type: 'string' },
+        loanTerm: { type: 'string' }
+    }
+});
+
+const args = parsed.values;
 
 const principal = parseFloat(args.principal);
 const interestRate = parseFloat(args.interestRate);
